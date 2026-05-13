@@ -47,16 +47,19 @@ img { max-width: 100%; display: block; }
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: block;
+  overflow: hidden;
+  width: 261px;
+  height: 60px;
   text-decoration: none;
+  flex-shrink: 0;
 }
 
 .logo-img {
-  height: 72px;
-  width: auto;
-
+  width: 320px;
+  height: auto;
+  margin-top: -121px;
+  margin-left: -24px;
 }
 
 .nav-links {

@@ -53,6 +53,7 @@ img { max-width: 100%; display: block; }
   height: 80px;
   text-decoration: none;
   flex-shrink: 0;
+  align-self: center;
 }
 
 .logo-img {

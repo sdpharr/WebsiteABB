@@ -40,7 +40,7 @@ img { max-width: 100%; display: block; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  height: 72px;
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -54,8 +54,9 @@ img { max-width: 100%; display: block; }
 }
 
 .logo-img {
-  height: 60px;
+  height: 72px;
   width: auto;
+
 }
 
 .nav-links {

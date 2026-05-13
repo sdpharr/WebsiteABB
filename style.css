@@ -50,7 +50,7 @@ img { max-width: 100%; display: block; }
   display: block;
   overflow: hidden;
   width: 250px;
-  height: 65px;
+  height: 80px;
   text-decoration: none;
   flex-shrink: 0;
 }
@@ -58,7 +58,7 @@ img { max-width: 100%; display: block; }
 .logo-img {
   width: 305px;
   height: auto;
-  margin-top: -111px;
+  margin-top: -95px;
   margin-left: -21px;
 }
 

@@ -58,6 +58,7 @@ img { max-width: 100%; display: block; }
 
 .logo-img {
   width: 305px;
+  max-width: none;
   height: auto;
   margin-top: -104px;
   margin-left: -21px;

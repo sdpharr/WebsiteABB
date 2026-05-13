@@ -47,8 +47,7 @@ img { max-width: 100%; display: block; }
 }
 
 .logo {
-  display: flex;
-  align-items: center;
+  display: block;
   overflow: hidden;
   width: 250px;
   height: 65px;

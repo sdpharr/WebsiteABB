@@ -1,286 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- Website gemaakt door SofferIT (sofferit.nl) | Versie 1.0 -->
 <html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contactformulier – AB Bouwinspecties</title>
-  <meta name="description" content="Neem contact op met AB Bouwinspecties. Plan een inspectie in of stel je vraag via ons contactformulier.">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .contact-page-layout {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 64px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 24px;
-      align-items: start;
-    }
-
-    .contact-sidebar h2 {
-      font-size: 1.6rem;
-      font-weight: 800;
-      color: var(--navy);
-      margin-bottom: 16px;
-    }
-
-    .contact-sidebar p {
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 32px;
-    }
-
-    .contact-sidebar-item {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      margin-bottom: 20px;
-      padding: 16px;
-      background: var(--gray-bg);
-      border-radius: 10px;
-    }
-
-    .contact-sidebar-item svg {
-      width: 22px;
-      height: 22px;
-      stroke: var(--navy);
-      fill: none;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .contact-sidebar-item div {
-      font-size: 14px;
-    }
-
-    .contact-sidebar-item strong {
-      display: block;
-      color: var(--navy);
-      font-weight: 700;
-      margin-bottom: 2px;
-    }
-
-    .contact-sidebar-item a {
-      color: var(--text);
-      text-decoration: underline;
-    }
-
-    @media (max-width: 900px) {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contactformulier – AB Bouwinspecties</title>
+    <meta
+      name="description"
+      content="Neem contact op met AB Bouwinspecties. Plan een inspectie in of stel je vraag via ons contactformulier."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
       .contact-page-layout {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 48px 24px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 64px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 80px 24px;
+        align-items: start;
       }
-    }
-  </style>
-</head>
-<body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="AB Bouwinspecties" class="logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Diensten</a>
-        <ul class="dropdown-menu">
-          <li><a href="vooropname.html">Vooropname</a></li>
-          <li><a href="bouwkundige-keuring.html">Bouwkundige keuring</a></li>
-          <li><a href="funderingsrisico.html">Funderingsrisico onderzoek</a></li>
+      .contact-sidebar h2 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        color: var(--navy);
+        margin-bottom: 16px;
+      }
+
+      .contact-sidebar p {
+        color: var(--text-light);
+        line-height: 1.7;
+        margin-bottom: 32px;
+      }
+
+      .contact-sidebar-item {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding: 16px;
+        background: var(--gray-bg);
+        border-radius: 10px;
+      }
+
+      .contact-sidebar-item svg {
+        width: 22px;
+        height: 22px;
+        stroke: var(--navy);
+        fill: none;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+
+      .contact-sidebar-item div {
+        font-size: 14px;
+      }
+
+      .contact-sidebar-item strong {
+        display: block;
+        color: var(--navy);
+        font-weight: 700;
+        margin-bottom: 2px;
+      }
+
+      .contact-sidebar-item a {
+        color: var(--text);
+        text-decoration: underline;
+      }
+
+      @media (max-width: 900px) {
+        .contact-page-layout {
+          grid-template-columns: 1fr;
+          gap: 40px;
+          padding: 48px 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="AB Bouwinspecties" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#">Diensten</a>
+            <ul class="dropdown-menu">
+              <li><a href="vooropname.html">Vooropname</a></li>
+              <li><a href="bouwkundige-keuring.html">Bouwkundige keuring</a></li>
+              <li><a href="funderingsrisico.html">Funderingsrisico onderzoek</a></li>
+            </ul>
+          </li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="contact.html" class="nav-cta active">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="over-ons.html">Over ons</a></li>
-      <li><a href="contact.html" class="nav-cta active">Contact</a></li>
-    </ul>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <span style="display:block;padding:12px 0 4px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#718096;text-transform:uppercase;">Diensten</span>
-    <a href="vooropname.html" class="mobile-sub">Vooropname</a>
-    <a href="bouwkundige-keuring.html" class="mobile-sub">Bouwkundige keuring</a>
-    <a href="funderingsrisico.html" class="mobile-sub">Funderingsrisico onderzoek</a>
-    <a href="over-ons.html">Over ons</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <span
+          style="
+            display: block;
+            padding: 12px 0 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #718096;
+            text-transform: uppercase;
+          "
+        >
+          Diensten
+        </span>
+        <a href="vooropname.html" class="mobile-sub">Vooropname</a>
+        <a href="bouwkundige-keuring.html" class="mobile-sub">Bouwkundige keuring</a>
+        <a href="funderingsrisico.html" class="mobile-sub">Funderingsrisico onderzoek</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <span>Contact</span>
-    </div>
-    <h1>Contactformulier</h1>
-    <p>Plan een inspectie in of stel je vraag — we reageren zo snel mogelijk.</p>
-  </div>
-</div>
-
-<!-- CONTACT LAYOUT -->
-<div class="contact-page-layout">
-
-  <!-- SIDEBAR -->
-  <aside class="contact-sidebar">
-    <h2>Neem contact op</h2>
-    <p>Heb je vragen of wil je direct een inspectie inplannen? Wij helpen je graag verder.</p>
-
-    <div class="contact-sidebar-item">
-      <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.27 5.27l.75-.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-      <div>
-        <strong>Telefoon</strong>
-        <a href="tel:+31123456789">123-456-7890</a>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Contact</span>
+        </div>
+        <h1>Contactformulier</h1>
+        <p>Plan een inspectie in of stel je vraag — we reageren zo snel mogelijk.</p>
       </div>
     </div>
 
-    <div class="contact-sidebar-item">
-      <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <div>
-        <strong>E-mail</strong>
-        <a href="mailto:contact@abbouwinspecties.nl">contact@abbouwinspecties.nl</a>
-      </div>
-    </div>
+    <!-- CONTACT LAYOUT -->
+    <div class="contact-page-layout">
+      <!-- SIDEBAR -->
+      <aside class="contact-sidebar">
+        <h2>Neem contact op</h2>
+        <p>Heb je vragen of wil je direct een inspectie inplannen? Wij helpen je graag verder.</p>
 
-    <div class="contact-sidebar-item">
-      <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      <div>
-        <strong>Werkgebied</strong>
-        Actief in heel Nederland
-      </div>
-    </div>
-  </aside>
-
-  <!-- FORM -->
-  <main>
-    <div class="form-card">
-      <form id="contactForm" onsubmit="submitForm(event)" novalidate>
-
-        <div class="form-group">
-          <label for="naam">Naam</label>
-          <input type="text" id="naam" name="naam" placeholder="Vul hier je volledige naam in" required>
-        </div>
-
-        <div class="form-group">
-          <label for="email">E-mailadres</label>
-          <input type="email" id="email" name="email" placeholder="Zodat we je kunnen bereiken met een reactie of offerte" required>
-        </div>
-
-        <div class="form-group">
-          <label for="telefoon">Telefoonnummer <span class="optional">(optioneel)</span></label>
-          <input type="tel" id="telefoon" name="telefoon" placeholder="Optioneel, maar handig voor snelle afstemming">
-        </div>
-
-        <div class="form-group">
-          <label for="adres">Adres van het object</label>
-          <input type="text" id="adres" name="adres" placeholder="Straat, huisnummer, postcode en plaats" required>
-        </div>
-
-        <div class="form-group">
-          <label>Type aanvraag <span style="font-size:12px;color:#718096;font-weight:400;">(meerdere keuzes mogelijk)</span></label>
-          <div class="checkbox-group">
-            <label class="checkbox-item">
-              <input type="checkbox" name="dienst" value="bouwkundige-keuring">
-              Bouwkundige keuring
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" name="dienst" value="vooropname">
-              Vooropname
-            </label>
-            <label class="checkbox-item">
-              <input type="checkbox" name="dienst" value="funderingsrisico">
-              Funderingsrisico onderzoek (Fase-0)
-            </label>
-            <label class="checkbox-item" id="andersLabel">
-              <input type="checkbox" name="dienst" value="anders" onchange="toggleAnders(this)">
-              Anders, namelijk&hellip;
-            </label>
-            <input type="text" id="andersInput" name="andersNamelijk" placeholder="Beschrijf je aanvraag" style="display:none;margin-top:4px;">
+        <div class="contact-sidebar-item">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.27 5.27l.75-.75a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16.92z"
+            />
+          </svg>
+          <div>
+            <strong>Telefoon</strong>
+            <a href="tel:+31123456789">123-456-7890</a>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="datum">Voorkeursdatum voor de inspectie <span class="optional">(optioneel)</span></label>
-          <input type="date" id="datum" name="datum">
-          <small>Geen garantie, maar we denken graag mee</small>
-        </div>
-
-        <div class="form-group">
-          <label for="bericht">Bericht</label>
-          <textarea id="bericht" name="bericht" placeholder="Beschrijf kort je vraag of situatie" rows="4"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="bestanden">Bestanden uploaden <span class="optional">(optioneel)</span></label>
-          <input type="file" id="bestanden" name="bestanden" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
-          <small>Bijvoorbeeld: verkoopbrochure, tekeningen of foto's</small>
-        </div>
-
-        <div class="form-group">
-          <div class="consent-box">
-            <input type="checkbox" id="toestemming" name="toestemming" required>
-            <label for="toestemming">Ik ga akkoord met het verwerken van mijn gegevens volgens het <a href="privacybeleid.html" style="color:var(--navy);text-decoration:underline;">privacybeleid</a>.</label>
+        <div class="contact-sidebar-item">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <div>
+            <strong>E-mail</strong>
+            <a href="mailto:contact@abbouwinspecties.nl">contact@abbouwinspecties.nl</a>
           </div>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width:100%;font-size:16px;padding:14px;">Verstuur aanvraag</button>
+        <div class="contact-sidebar-item">
+          <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          <div>
+            <strong>Werkgebied</strong>
+            Actief in heel Nederland
+          </div>
+        </div>
+      </aside>
 
-      </form>
+      <!-- FORM -->
+      <main>
+        <div class="form-card">
+          <form id="contactForm" onsubmit="submitForm(event)" novalidate>
+            <div class="form-group">
+              <label for="naam">Naam</label>
+              <input type="text" id="naam" name="naam" placeholder="Vul hier je volledige naam in" required />
+            </div>
 
-      <div class="form-success" id="formSuccess">
-        Bedankt voor je aanvraag! We nemen zo snel mogelijk contact met je op.
-      </div>
+            <div class="form-group">
+              <label for="email">E-mailadres</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Zodat we je kunnen bereiken met een reactie of offerte"
+                required
+              />
+            </div>
 
+            <div class="form-group">
+              <label for="telefoon">
+                Telefoonnummer
+                <span class="optional">(optioneel)</span>
+              </label>
+              <input
+                type="tel"
+                id="telefoon"
+                name="telefoon"
+                placeholder="Optioneel, maar handig voor snelle afstemming"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="adres">Adres van het object</label>
+              <input
+                type="text"
+                id="adres"
+                name="adres"
+                placeholder="Straat, huisnummer, postcode en plaats"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label>
+                Type aanvraag
+                <span style="font-size: 12px; color: #718096; font-weight: 400">(meerdere keuzes mogelijk)</span>
+              </label>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="dienst" value="bouwkundige-keuring" />
+                  Bouwkundige keuring
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="dienst" value="vooropname" />
+                  Vooropname
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="dienst" value="funderingsrisico" />
+                  Funderingsrisico onderzoek (Fase-0)
+                </label>
+                <label class="checkbox-item" id="andersLabel">
+                  <input type="checkbox" name="dienst" value="anders" onchange="toggleAnders(this)" />
+                  Anders, namelijk&hellip;
+                </label>
+                <input
+                  type="text"
+                  id="andersInput"
+                  name="andersNamelijk"
+                  placeholder="Beschrijf je aanvraag"
+                  style="display: none; margin-top: 4px"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="datum">
+                Voorkeursdatum voor de inspectie
+                <span class="optional">(optioneel)</span>
+              </label>
+              <input type="date" id="datum" name="datum" />
+              <small>Geen garantie, maar we denken graag mee</small>
+            </div>
+
+            <div class="form-group">
+              <label for="bericht">Bericht</label>
+              <textarea
+                id="bericht"
+                name="bericht"
+                placeholder="Beschrijf kort je vraag of situatie"
+                rows="4"
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="bestanden">
+                Bestanden uploaden
+                <span class="optional">(optioneel)</span>
+              </label>
+              <input type="file" id="bestanden" name="bestanden" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" />
+              <small>Bijvoorbeeld: verkoopbrochure, tekeningen of foto's</small>
+            </div>
+
+            <div class="form-group">
+              <div class="consent-box">
+                <input type="checkbox" id="toestemming" name="toestemming" required />
+                <label for="toestemming">
+                  Ik ga akkoord met het verwerken van mijn gegevens volgens het
+                  <a href="privacybeleid.html" style="color: var(--navy); text-decoration: underline">privacybeleid</a>
+                  .
+                </label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; font-size: 16px; padding: 14px">
+              Verstuur aanvraag
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            Bedankt voor je aanvraag! We nemen zo snel mogelijk contact met je op.
+          </div>
+        </div>
+      </main>
     </div>
-  </main>
-</div>
 
-<!-- FOOTER -->
-<footer>
-  <p>Wij werken transparant en volgens duidelijke afspraken. Lees <a href="leveringsvoorwaarden.html">hier</a> onze leveringsvoorwaarden voor meer informatie.</p>
-  <p style="margin-top:8px;">&copy; <span id="footer-year"></span> AB Bouwinspecties &mdash; Alle rechten voorbehouden &mdash; Made with &hearts; by <a href="https://sofferit.nl" target="_blank" style="color:inherit;text-decoration:underline;">SofferIT</a></p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Wij werken transparant en volgens duidelijke afspraken. Lees
+        <a href="leveringsvoorwaarden.html">hier</a>
+        onze leveringsvoorwaarden voor meer informatie.
+      </p>
+      <p style="margin-top: 8px">
+        &copy;
+        <span id="footer-year"></span>
+        AB Bouwinspecties &mdash; Alle rechten voorbehouden &mdash; Made with &hearts; by
+        <a href="https://sofferit.nl" target="_blank" style="color: inherit; text-decoration: underline">SofferIT</a>
+      </p>
+    </footer>
 
-<script>
-document.getElementById("footer-year").textContent = new Date().getFullYear();
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+    <script>
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
 
-function toggleAnders(checkbox) {
-  const input = document.getElementById('andersInput');
-  input.style.display = checkbox.checked ? 'block' : 'none';
-  if (checkbox.checked) input.focus();
-}
+      function toggleAnders(checkbox) {
+        const input = document.getElementById("andersInput");
+        input.style.display = checkbox.checked ? "block" : "none";
+        if (checkbox.checked) input.focus();
+      }
 
-function submitForm(e) {
-  e.preventDefault();
-  const form = document.getElementById('contactForm');
-  const consent = document.getElementById('toestemming');
+      function submitForm(e) {
+        e.preventDefault();
+        const form = document.getElementById("contactForm");
+        const consent = document.getElementById("toestemming");
 
-  if (!consent.checked) {
-    consent.setCustomValidity('Geef toestemming om het formulier te versturen.');
-    consent.reportValidity();
-    return;
-  }
+        if (!consent.checked) {
+          consent.setCustomValidity("Geef toestemming om het formulier te versturen.");
+          consent.reportValidity();
+          return;
+        }
 
-  consent.setCustomValidity('');
+        consent.setCustomValidity("");
 
-  const btn = form.querySelector('button[type="submit"]');
-  btn.disabled = true;
-  btn.textContent = 'Versturen…';
+        const btn = form.querySelector('button[type="submit"]');
+        btn.disabled = true;
+        btn.textContent = "Versturen…";
 
-  setTimeout(() => {
-    form.style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
-  }, 800);
-}
-</script>
-</body>
+        setTimeout(() => {
+          form.style.display = "none";
+          document.getElementById("formSuccess").style.display = "block";
+        }, 800);
+      }
+    </script>
+  </body>
 </html>

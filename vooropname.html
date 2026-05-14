@@ -1,113 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <!-- Website gemaakt door SofferIT (sofferit.nl) | Versie 1.0 -->
 <html lang="nl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vooropname – AB Bouwinspecties</title>
-  <meta name="description" content="Vastlegging van de technische staat van uw woning vóór bouw- of sloopwerkzaamheden. Duidelijkheid vooraf voorkomt discussies achteraf. Vanaf €400 incl. btw.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="navbar-inner">
-    <a href="index.html" class="logo">
-      <img src="logo.png" alt="AB Bouwinspecties" class="logo-img">
-    </a>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="active">Diensten</a>
-        <ul class="dropdown-menu">
-          <li><a href="vooropname.html" style="font-weight:700;color:#1B2D5E;">Vooropname</a></li>
-          <li><a href="bouwkundige-keuring.html">Bouwkundige keuring</a></li>
-          <li><a href="funderingsrisico.html">Funderingsrisico onderzoek</a></li>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vooropname – AB Bouwinspecties</title>
+    <meta
+      name="description"
+      content="Vastlegging van de technische staat van uw woning vóór bouw- of sloopwerkzaamheden. Duidelijkheid vooraf voorkomt discussies achteraf. Vanaf €400 incl. btw."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-inner">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="AB Bouwinspecties" class="logo-img" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="active">Diensten</a>
+            <ul class="dropdown-menu">
+              <li><a href="vooropname.html" style="font-weight: 700; color: #1b2d5e">Vooropname</a></li>
+              <li><a href="bouwkundige-keuring.html">Bouwkundige keuring</a></li>
+              <li><a href="funderingsrisico.html">Funderingsrisico onderzoek</a></li>
+            </ul>
+          </li>
+          <li><a href="over-ons.html">Over ons</a></li>
+          <li><a href="contact.html" class="nav-cta">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="over-ons.html">Over ons</a></li>
-      <li><a href="contact.html" class="nav-cta">Contact</a></li>
-    </ul>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html">Home</a>
-    <span style="display:block;padding:12px 0 4px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#718096;text-transform:uppercase;">Diensten</span>
-    <a href="vooropname.html" class="mobile-sub" style="font-weight:700;">Vooropname</a>
-    <a href="bouwkundige-keuring.html" class="mobile-sub">Bouwkundige keuring</a>
-    <a href="funderingsrisico.html" class="mobile-sub">Funderingsrisico onderzoek</a>
-    <a href="over-ons.html">Over ons</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</nav>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <span
+          style="
+            display: block;
+            padding: 12px 0 4px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #718096;
+            text-transform: uppercase;
+          "
+        >
+          Diensten
+        </span>
+        <a href="vooropname.html" class="mobile-sub" style="font-weight: 700">Vooropname</a>
+        <a href="bouwkundige-keuring.html" class="mobile-sub">Bouwkundige keuring</a>
+        <a href="funderingsrisico.html" class="mobile-sub">Funderingsrisico onderzoek</a>
+        <a href="over-ons.html">Over ons</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
 
-<!-- PAGE HEADER -->
-<div class="page-header">
-  <div class="container">
-    <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
-      <a href="#">Diensten</a>
-      <span>/</span>
-      <span>Vooropname</span>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <a href="#">Diensten</a>
+          <span>/</span>
+          <span>Vooropname</span>
+        </div>
+        <h1>Vooropname</h1>
+        <p>Vastlegging van de technische staat van uw woning vóór bouw- of sloopwerkzaamheden in de omgeving.</p>
+      </div>
     </div>
-    <h1>Vooropname</h1>
-    <p>Vastlegging van de technische staat van uw woning vóór bouw- of sloopwerkzaamheden in de omgeving.</p>
-  </div>
-</div>
 
-<!-- SERVICE DETAIL -->
-<div class="service-detail">
-  <div>
-    <h2>Wat is een vooropname?</h2>
-    <p>Veranderingen in de omgeving van uw woning, zoals bouw- of sloopwerkzaamheden, kunnen invloed hebben op de staat van uw woning. Hoewel betrokken partijen schade zoveel mogelijk proberen te voorkomen, is het belangrijk om vooraf duidelijkheid te hebben over de huidige staat van uw woning.</p>
-    <p>Met een vooropname (nulmeting) wordt de technische staat van uw woning vóór de werkzaamheden zorgvuldig vastgelegd. Zo ontstaat er een helder en objectief beeld van de bestaande situatie, waardoor achteraf eenvoudig kan worden vastgesteld of er schade is ontstaan.</p>
-    <p><strong>Duidelijkheid vooraf voorkomt discussies achteraf.</strong></p>
-  </div>
-  <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Vooropname van woning">
-</div>
+    <!-- SERVICE DETAIL -->
+    <div class="service-detail">
+      <div>
+        <h2>Wat is een vooropname?</h2>
+        <p>
+          Veranderingen in de omgeving van uw woning, zoals bouw- of sloopwerkzaamheden, kunnen invloed hebben op de
+          staat van uw woning. Hoewel betrokken partijen schade zoveel mogelijk proberen te voorkomen, is het belangrijk
+          om vooraf duidelijkheid te hebben over de huidige staat van uw woning.
+        </p>
+        <p>
+          Met een vooropname (nulmeting) wordt de technische staat van uw woning vóór de werkzaamheden zorgvuldig
+          vastgelegd. Zo ontstaat er een helder en objectief beeld van de bestaande situatie, waardoor achteraf
+          eenvoudig kan worden vastgesteld of er schade is ontstaan.
+        </p>
+        <p><strong>Duidelijkheid vooraf voorkomt discussies achteraf.</strong></p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="Vooropname van woning" />
+    </div>
 
-<!-- PRIJS SECTION -->
-<section class="price-section">
-  <div class="container">
-    <p class="price-tag">€400,&ndash; incl. btw</p>
-    <p>Voor woningen tot 950 m² bedraagt de investering voor een vooropname €400,00 inclusief btw.<br>Voor iedere extra 50 m² geldt een meerprijs van €15,00 inclusief btw.</p>
-    <p style="margin-top:8px;font-weight:600;color:rgba(255,255,255,0.9);">Tijdens de vooropname wordt de woning als volgt opgenomen en gerapporteerd:</p>
-    <ul class="price-list">
-      <li>Visuele opname van de woning en alle relevante bouwdelen</li>
-      <li>Vastlegging van de huidige staat van het object</li>
-      <li>Fotodocumentatie van interieur en exterieur</li>
-      <li>Inventarisatie van scheuren, schade en gebreken</li>
-      <li>Rapport opgesteld conform de richtlijnen van NIVRE</li>
-      <li>Geschikt als vastlegging van de beginsituatie</li>
-    </ul>
-    <a href="contact.html" class="btn btn-outline">Vrijblijvende offerte aanvragen</a>
-  </div>
-</section>
+    <!-- PRIJS SECTION -->
+    <section class="price-section">
+      <div class="container">
+        <p class="price-tag">€400,&ndash; incl. btw</p>
+        <p>
+          Voor woningen tot 950 m² bedraagt de investering voor een vooropname €400,00 inclusief btw.
+          <br />
+          Voor iedere extra 50 m² geldt een meerprijs van €15,00 inclusief btw.
+        </p>
+        <p style="margin-top: 8px; font-weight: 600; color: rgba(255, 255, 255, 0.9)">
+          Tijdens de vooropname wordt de woning als volgt opgenomen en gerapporteerd:
+        </p>
+        <ul class="price-list">
+          <li>Visuele opname van de woning en alle relevante bouwdelen</li>
+          <li>Vastlegging van de huidige staat van het object</li>
+          <li>Fotodocumentatie van interieur en exterieur</li>
+          <li>Inventarisatie van scheuren, schade en gebreken</li>
+          <li>Rapport opgesteld conform de richtlijnen van NIVRE</li>
+          <li>Geschikt als vastlegging van de beginsituatie</li>
+        </ul>
+        <a href="contact.html" class="btn btn-outline">Vrijblijvende offerte aanvragen</a>
+      </div>
+    </section>
 
-<!-- CTA -->
-<div class="cta-banner">
-  <div class="container">
-    <h2>Heb je vragen of wil je direct een vooropname inplannen?</h2>
-    <p>Wij helpen je graag verder. Vul het contactformulier in voor een vrijblijvende offerte.</p>
-    <a href="contact.html" class="btn btn-primary">Contactformulier invullen</a>
-  </div>
-</div>
+    <!-- CTA -->
+    <div class="cta-banner">
+      <div class="container">
+        <h2>Heb je vragen of wil je direct een vooropname inplannen?</h2>
+        <p>Wij helpen je graag verder. Vul het contactformulier in voor een vrijblijvende offerte.</p>
+        <a href="contact.html" class="btn btn-primary">Contactformulier invullen</a>
+      </div>
+    </div>
 
-<!-- FOOTER -->
-<footer>
-  <p>Wij werken transparant en volgens duidelijke afspraken. Lees <a href="leveringsvoorwaarden.html">hier</a> onze leveringsvoorwaarden voor meer informatie.</p>
-  <p style="margin-top:8px;">&copy; <span id="footer-year"></span> AB Bouwinspecties &mdash; Alle rechten voorbehouden &mdash; Made with &hearts; by <a href="https://sofferit.nl" target="_blank" style="color:inherit;text-decoration:underline;">SofferIT</a></p>
-</footer>
+    <!-- FOOTER -->
+    <footer>
+      <p>
+        Wij werken transparant en volgens duidelijke afspraken. Lees
+        <a href="leveringsvoorwaarden.html">hier</a>
+        onze leveringsvoorwaarden voor meer informatie.
+      </p>
+      <p style="margin-top: 8px">
+        &copy;
+        <span id="footer-year"></span>
+        AB Bouwinspecties &mdash; Alle rechten voorbehouden &mdash; Made with &hearts; by
+        <a href="https://sofferit.nl" target="_blank" style="color: inherit; text-decoration: underline">SofferIT</a>
+      </p>
+    </footer>
 
-<script>
-document.getElementById("footer-year").textContent = new Date().getFullYear();
-function toggleMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
-</script>
-</body>
+    <script>
+      document.getElementById("footer-year").textContent = new Date().getFullYear();
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("open");
+      }
+    </script>
+  </body>
 </html>

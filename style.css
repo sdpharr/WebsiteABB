@@ -471,6 +471,22 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
+.cert-logos {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.cert-logos img {
+  height: 48px;
+  width: auto;
+  max-width: none;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
 .contact-detail svg {
   width: 20px;
   height: 20px;

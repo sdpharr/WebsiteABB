@@ -474,7 +474,7 @@ img { max-width: 100%; display: block; }
 .cert-logos {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   margin-top: 32px;
   flex-wrap: wrap;
 }
@@ -483,8 +483,10 @@ img { max-width: 100%; display: block; }
   height: 48px;
   width: auto;
   max-width: none;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  object-fit: contain;
 }
 
 .contact-detail svg {

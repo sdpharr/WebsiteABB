@@ -698,9 +698,9 @@ img {
 
 /* ===== PAGE HEADER ===== */
 .page-header {
-  background: var(--gray-bg);
+  background: #e4e8ef;
   padding: 60px 24px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 2px solid #cdd3de;
 }
 
 .page-header h1 {

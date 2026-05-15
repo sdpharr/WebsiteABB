@@ -315,7 +315,7 @@ img {
 }
 
 .section-gray {
-  background: var(--gray-bg);
+  background: #dce0e8;
 }
 .section-navy {
   background: var(--navy);

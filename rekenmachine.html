@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekenmachine</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #1a1a2e;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .calculator {
+            background: #16213e;
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            width: 320px;
+        }
+
+        .display {
+            background: #0f3460;
+            border-radius: 12px;
+            padding: 20px 16px 12px;
+            margin-bottom: 20px;
+            min-height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .display .geschiedenis {
+            color: #a0aec0;
+            font-size: 14px;
+            min-height: 20px;
+            margin-bottom: 4px;
+        }
+
+        .display .invoer {
+            color: #ffffff;
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            word-break: break-all;
+        }
+
+        .knoppen {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 12px;
+        }
+
+        button {
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            height: 64px;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.1s;
+        }
+
+        button:active {
+            transform: scale(0.94);
+            opacity: 0.85;
+        }
+
+        .btn-getal {
+            background: #1a1a3e;
+            color: #ffffff;
+        }
+
+        .btn-getal:hover {
+            background: #252550;
+        }
+
+        .btn-bewerking {
+            background: #0f3460;
+            color: #e94560;
+            font-size: 22px;
+        }
+
+        .btn-bewerking:hover {
+            background: #174080;
+        }
+
+        .btn-is-gelijk {
+            background: #e94560;
+            color: #ffffff;
+            font-size: 22px;
+        }
+
+        .btn-is-gelijk:hover {
+            background: #c73652;
+        }
+
+        .btn-wissen {
+            background: #533483;
+            color: #ffffff;
+            font-size: 15px;
+        }
+
+        .btn-wissen:hover {
+            background: #6a44a0;
+        }
+
+        .breed {
+            grid-column: span 2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <div class="display">
+        <div class="geschiedenis" id="geschiedenis"></div>
+        <div class="invoer" id="invoer">0</div>
+    </div>
+
+    <div class="knoppen">
+        <button class="btn-wissen" onclick="wisAlles()">AC</button>
+        <button class="btn-wissen" onclick="wisLaatste()">⌫</button>
+        <button class="btn-bewerking" onclick="kiesBewerking('%')">%</button>
+        <button class="btn-bewerking" onclick="kiesBewerking('/')">÷</button>
+
+        <button class="btn-getal" onclick="voegGetalToe('7')">7</button>
+        <button class="btn-getal" onclick="voegGetalToe('8')">8</button>
+        <button class="btn-getal" onclick="voegGetalToe('9')">9</button>
+        <button class="btn-bewerking" onclick="kiesBewerking('*')">×</button>
+
+        <button class="btn-getal" onclick="voegGetalToe('4')">4</button>
+        <button class="btn-getal" onclick="voegGetalToe('5')">5</button>
+        <button class="btn-getal" onclick="voegGetalToe('6')">6</button>
+        <button class="btn-bewerking" onclick="kiesBewerking('-')">−</button>
+
+        <button class="btn-getal" onclick="voegGetalToe('1')">1</button>
+        <button class="btn-getal" onclick="voegGetalToe('2')">2</button>
+        <button class="btn-getal" onclick="voegGetalToe('3')">3</button>
+        <button class="btn-bewerking" onclick="kiesBewerking('+')">+</button>
+
+        <button class="btn-getal breed" onclick="voegGetalToe('0')">0</button>
+        <button class="btn-getal" onclick="voegKomma()">,</button>
+        <button class="btn-is-gelijk" onclick="bereken()">=</button>
+    </div>
+</div>
+
+<script>
+    let huidigGetal = '0';
+    let eersteGetal = null;
+    let bewerking = null;
+    let nieuweInvoer = false;
+
+    const invoerEl = document.getElementById('invoer');
+    const geschiedenisEl = document.getElementById('geschiedenis');
+
+    function updateDisplay() {
+        invoerEl.textContent = huidigGetal.replace('.', ',');
+    }
+
+    function voegGetalToe(getal) {
+        if (nieuweInvoer) {
+            huidigGetal = getal;
+            nieuweInvoer = false;
+        } else {
+            huidigGetal = huidigGetal === '0' ? getal : huidigGetal + getal;
+        }
+        updateDisplay();
+    }
+
+    function voegKomma() {
+        if (nieuweInvoer) {
+            huidigGetal = '0.';
+            nieuweInvoer = false;
+        } else if (!huidigGetal.includes('.')) {
+            huidigGetal += '.';
+        }
+        updateDisplay();
+    }
+
+    function kiesBewerking(op) {
+        if (eersteGetal !== null && !nieuweInvoer) {
+            bereken(true);
+        }
+        eersteGetal = parseFloat(huidigGetal);
+        bewerking = op;
+        nieuweInvoer = true;
+
+        const symbolen = { '+': '+', '-': '−', '*': '×', '/': '÷', '%': '%' };
+        geschiedenisEl.textContent = formatteerGetal(eersteGetal) + ' ' + symbolen[op];
+    }
+
+    function bereken(tussenStap = false) {
+        if (eersteGetal === null || bewerking === null) return;
+
+        const tweedeGetal = parseFloat(huidigGetal);
+        const symbolen = { '+': '+', '-': '−', '*': '×', '/': '÷', '%': '%' };
+        let resultaat;
+
+        switch (bewerking) {
+            case '+': resultaat = eersteGetal + tweedeGetal; break;
+            case '-': resultaat = eersteGetal - tweedeGetal; break;
+            case '*': resultaat = eersteGetal * tweedeGetal; break;
+            case '/':
+                if (tweedeGetal === 0) {
+                    huidigGetal = 'Fout';
+                    geschiedenisEl.textContent = 'Delen door nul';
+                    eersteGetal = null;
+                    bewerking = null;
+                    nieuweInvoer = true;
+                    updateDisplay();
+                    return;
+                }
+                resultaat = eersteGetal / tweedeGetal;
+                break;
+            case '%': resultaat = eersteGetal % tweedeGetal; break;
+        }
+
+        if (!tussenStap) {
+            geschiedenisEl.textContent =
+                formatteerGetal(eersteGetal) + ' ' + symbolen[bewerking] + ' ' + formatteerGetal(tweedeGetal) + ' =';
+            eersteGetal = null;
+            bewerking = null;
+        }
+
+        resultaat = Math.round(resultaat * 1e10) / 1e10;
+        huidigGetal = String(resultaat);
+        nieuweInvoer = true;
+        updateDisplay();
+    }
+
+    function formatteerGetal(n) {
+        return String(Math.round(n * 1e10) / 1e10).replace('.', ',');
+    }
+
+    function wisAlles() {
+        huidigGetal = '0';
+        eersteGetal = null;
+        bewerking = null;
+        nieuweInvoer = false;
+        geschiedenisEl.textContent = '';
+        updateDisplay();
+    }
+
+    function wisLaatste() {
+        if (nieuweInvoer || huidigGetal === 'Fout') {
+            wisAlles();
+            return;
+        }
+        huidigGetal = huidigGetal.length > 1 ? huidigGetal.slice(0, -1) : '0';
+        updateDisplay();
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key >= '0' && e.key <= '9') voegGetalToe(e.key);
+        else if (e.key === ',' || e.key === '.') voegKomma();
+        else if (e.key === '+') kiesBewerking('+');
+        else if (e.key === '-') kiesBewerking('-');
+        else if (e.key === '*') kiesBewerking('*');
+        else if (e.key === '/') { e.preventDefault(); kiesBewerking('/'); }
+        else if (e.key === '%') kiesBewerking('%');
+        else if (e.key === 'Enter' || e.key === '=') bereken();
+        else if (e.key === 'Backspace') wisLaatste();
+        else if (e.key === 'Escape') wisAlles();
+    });
+</script>
+
+</body>
+</html>

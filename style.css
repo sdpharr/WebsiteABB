@@ -406,6 +406,12 @@ img {
 .usp-item {
   text-align: center;
   padding: 24px 16px;
+  transition: transform 0.2s;
+  cursor: default;
+}
+
+.usp-item:hover {
+  transform: translateY(-6px);
 }
 
 .usp-icon {
@@ -418,6 +424,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.usp-item:hover .usp-icon {
+  background: rgba(255, 255, 255, 0.22);
+  border-color: rgba(255, 255, 255, 0.7);
 }
 
 .usp-icon svg {
@@ -425,6 +439,11 @@ img {
   height: 28px;
   stroke: white;
   fill: none;
+  transition: transform 0.2s;
+}
+
+.usp-item:hover .usp-icon svg {
+  transform: scale(1.15);
 }
 
 .usp-item p {

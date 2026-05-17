@@ -1,3 +1,20 @@
+/* ===== FONTS ===== */
+@font-face {
+  font-family: "TT Hoves Pro";
+  src: url("fonts/TT Hoves Pro Trial Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro";
+  src: url("fonts/TT Hoves Pro Trial Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ===== RESET & BASE ===== */
 *,
 *::before,
@@ -25,6 +42,7 @@ html {
 
 body {
   font-family:
+    "TT Hoves Pro",
     "Segoe UI",
     system-ui,
     -apple-system,

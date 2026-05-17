@@ -322,6 +322,11 @@ img {
   margin-left: 12px;
 }
 
+.hero-content .btn {
+  min-width: 200px;
+  text-align: center;
+}
+
 .btn-outline:hover {
   background: var(--white);
   color: var(--navy);

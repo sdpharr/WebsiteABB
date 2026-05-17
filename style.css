@@ -264,7 +264,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("afbeeldingen/homefoto.jpg") center/cover no-repeat;
+  background: url("afbeeldingen/afbeelding-home-pagina.png") center/cover no-repeat;
   filter: brightness(0.4);
 }
 

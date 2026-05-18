@@ -9,8 +9,32 @@
 
 @font-face {
   font-family: "TT Hoves Pro";
-  src: url("fonts/tt-hoves-pro-variable.ttf") format("truetype");
-  font-weight: 100 900;
+  src: url("fonts/tt-hoves-pro-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro";
+  src: url("fonts/tt-hoves-pro-demibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro";
+  src: url("fonts/tt-hoves-pro-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro";
+  src: url("fonts/tt-hoves-pro-extrabold.ttf") format("truetype");
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }

@@ -1,6 +1,14 @@
 /* ===== FONTS ===== */
 @font-face {
   font-family: "TT Hoves Pro";
+  src: url("fonts/tt-hoves-pro-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TT Hoves Pro";
   src: url("fonts/tt-hoves-pro-variable.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
@@ -47,6 +55,8 @@ body {
     system-ui,
     -apple-system,
     sans-serif;
+  font-style: normal;
+  font-synthesis: none;
   color: var(--text);
   line-height: 1.6;
   font-size: 16px;

@@ -357,9 +357,21 @@ img {
   margin-left: 12px;
 }
 
-.hero-content .btn {
-  min-width: 200px;
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-btns .btn {
+  flex: 1;
   text-align: center;
+  min-width: 180px;
+  max-width: 240px;
+}
+
+.hero-btns .btn-outline {
+  margin-left: 0;
 }
 
 .btn-outline:hover {

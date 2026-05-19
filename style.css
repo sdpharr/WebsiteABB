@@ -341,6 +341,7 @@ img {
 .btn-primary {
   background: var(--navy);
   color: var(--white);
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover {

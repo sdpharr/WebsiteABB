@@ -298,7 +298,7 @@ img {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url("afbeeldingen/afbeelding-home-pagina.png") center 20% / cover no-repeat;
+  background: url("afbeeldingen/homefoto-final.png") center 20% / cover no-repeat;
   filter: brightness(0.4);
 }
 

@@ -841,12 +841,15 @@ img {
 }
 
 /* ===== SERVICE DETAIL ===== */
+.service-detail-wrap {
+  padding: 80px 24px;
+}
+
 .service-detail {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
-  padding: 80px 24px;
   max-width: 1200px;
   margin: 0 auto;
 }
